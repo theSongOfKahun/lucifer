@@ -1,0 +1,18 @@
+# 忽略 Eclipse 项目文件
+.settings/
+.classpath
+.project
+
+# 忽略 IDEA 项目文件
+.idea
+target/
+*.iml
+
+# ignore VSCODE
+*.factorypath
+.vscode
+
+# 忽略平台日志
+disconf/
+monitor/
+span/
