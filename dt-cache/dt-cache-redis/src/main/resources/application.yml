@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: dt-cache-redis
+  redis:
+    host: 49.233.139.17
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
