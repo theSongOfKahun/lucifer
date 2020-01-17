@@ -27,12 +27,12 @@ public class RedisConfig {
 
     ObjectMapper objectMapper = new ObjectMapper();
     objectMapper.setVisibility(PropertyAccessor.ALL,Visibility.ANY);
-
     jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
 
-    redisTemplate.setStringSerializer(new StringRedisSerializer());
-    redisTemplate.setHashKeySerializer(new StringRedisSerializer());
-    redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
+    StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+
+    redisTemplate.setKeySerializer(stringRedisSerializer);
+    redisTemplate.setValueSerializer(stringRedisSerializer);
 
     redisTemplate.afterPropertiesSet();
 

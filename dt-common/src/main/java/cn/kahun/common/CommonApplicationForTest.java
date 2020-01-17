@@ -1,21 +1,22 @@
-package cn.kahun.dt.cache.reids;
+package cn.kahun.common;
 
 import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
- * @create: 2019/12/12 10:51 下午
+ * @create: 2020/1/9 4:13 下午
  * @author: liboah
  * @description: 记得写注释。。。
  **/
 @SpringBootApplication
-public class RedisApplication {
+public class CommonApplicationForTest {
 
   public static void main(String[] args) {
 
-    new SpringApplicationBuilder(RedisApplication.class)
-        .web(WebApplicationType.SERVLET)
+    new SpringApplicationBuilder(CommonApplicationForTest.class)
+        .web(WebApplicationType.NONE)
         .run(args);
   }
+
 }
