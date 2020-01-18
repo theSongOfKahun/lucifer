@@ -13,6 +13,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>sa-spring</module>
+    <module>sa-mybatis</module>
   </modules>
 
 

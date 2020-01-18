@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+  <classPathEntry
+    location="/Users/prague/Files/apache-maven-3.6.2/repository/mysql/mysql-connector-java/5.1.22"/>
+
+  <context id="mysqlTables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+      connectionURL="jdbc:mysql://10.16.2.24:3306/piaoeda?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai"
+      userId="piaoeda"
+      password="cyqakyOcH1">
+    </jdbcConnection>
+
+    <javaTypeResolver>
+      <property name="forceBigDecimals" value="false"/>
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="test.model" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true"/>
+      <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mappers" targetProject="src/main">
+      <property name="enableSubPackages" value="true"/>
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao" targetProject="src/main/java/">
+      <property name="enableSubPackages" value="true"/>
+    </javaClientGenerator>
+
+    <table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer"
+    enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false"
+    enableUpdateByExample="false"/>
+
+  </context>
+</generatorConfiguration>

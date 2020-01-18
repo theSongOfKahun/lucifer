@@ -15,6 +15,7 @@
     <module>dt-cache</module>
     <module>bt-base</module>
     <module>sa-framework</module>
+    <module>dt-message</module>
   </modules>
 
   <properties>
