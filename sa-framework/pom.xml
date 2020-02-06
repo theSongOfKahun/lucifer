@@ -12,8 +12,8 @@
   <artifactId>sa-framework</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>sa-spring</module>
     <module>sa-mybatis</module>
+    <module>sa-framework-spring</module>
   </modules>
 
 
