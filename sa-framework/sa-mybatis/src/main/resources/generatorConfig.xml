@@ -40,9 +40,13 @@
       <property name="enableSubPackages" value="true"/>
     </javaClientGenerator>
 
-    <table schema="DB2ADMIN" tableName="admission_control" domainObjectName="AdmissionControl"
+    <table schema="DB2ADMIN" tableName="admission_quantity" domainObjectName="AdmissionQuantity"
     enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false"
     enableUpdateByExample="false"/>
+
+<!--    <table schema="DB2ADMIN" tableName="consumption_record_01" domainObjectName="ConsumptionRecord"-->
+<!--      enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false"-->
+<!--      enableUpdateByExample="false"/>-->
 
   </context>
 </generatorConfiguration>

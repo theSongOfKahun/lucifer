@@ -3,6 +3,7 @@ package cn.kahun.sa.framework.spring.test.spel;
 import cn.kahun.sa.framework.spring.beans.Inventor;
 import cn.kahun.sa.framework.spring.beans.ParseConfigurationBean;
 import cn.kahun.sa.framework.spring.beans.Simple;
+import cn.kahun.sa.framework.spring.beans.Society;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,11 @@ public class EvaluationTest {
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
         gregorianCalendar.set(2020, Calendar.FEBRUARY,23);
 
-        Inventor inventor = new Inventor("Nikola Tesla",gregorianCalendar.getTime(),"Serbian");
+        Inventor inventor = new Inventor();
+
+        inventor.setName("Nikola Tesla");
+        inventor.setBirthdate(gregorianCalendar.getTime());
+        inventor.setNationality("Serbian");
 
         Expression expression = expressionParser.parseExpression("name");
 
@@ -98,6 +103,35 @@ public class EvaluationTest {
         Assert.assertEquals(o,"");
 
         System.out.println(parseConfigurationBean.getStringList().size());
+    }
+
+    @Test
+    public void testGetValue2(){
+
+        Society society = new Society();
+
+        int size = 4;
+
+        List<Inventor> inventorList = new ArrayList<>(size);
+
+        for (int i = 0; i < size; i++) {
+
+            Inventor inventor = new Inventor();
+            inventor.setName("name"+i);
+
+            inventorList.add(inventor);
+        }
+
+//        society.setMembers(inventorList);
+
+        String elString = "members[0].name";
+
+        Expression expression = expressionParser.parseExpression(elString);
+
+        String name = expression.getValue(simpleEvaluationContext,society,String.class);
+
+        System.out.println(name);
+
     }
 
 }
