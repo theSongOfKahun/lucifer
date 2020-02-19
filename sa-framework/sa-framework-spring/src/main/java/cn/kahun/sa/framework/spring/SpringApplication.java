@@ -13,7 +13,7 @@ public class SpringApplication {
     public static void main(String[] args) {
 
         new SpringApplicationBuilder(SpringApplication.class)
-                .web(WebApplicationType.NONE)
+                .web(WebApplicationType.SERVLET)
                 .run(args);
 
     }

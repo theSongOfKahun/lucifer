@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cloud-native-application
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
