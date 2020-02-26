@@ -16,6 +16,7 @@
     <module>sa-framework</module>
     <module>dt-message</module>
     <module>mt-common</module>
+    <module>dt-security</module>
   </modules>
 
   <properties>
