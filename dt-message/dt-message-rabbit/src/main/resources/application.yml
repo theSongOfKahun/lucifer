@@ -9,3 +9,6 @@ spring:
     virtual-host: /
     username: rabbit
     password: rabbit
+    cache:
+      connection:
+        mode: channel
