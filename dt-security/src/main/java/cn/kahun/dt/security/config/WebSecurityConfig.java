@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @date 2020/2/22 22:35
  * @description 记得写注释
  */
-//@EnableWebSecurity SpringBoot 不需要重新标注
+@EnableWebSecurity
 @Configuration
 public class WebSecurityConfig implements WebMvcConfigurer {
 
@@ -21,7 +21,7 @@ public class WebSecurityConfig implements WebMvcConfigurer {
   public UserDetailsService userDetailsService(){
 
     InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-    manager.createUser(User.withDefaultPasswordEncoder().username("user").password("password").roles("ADMIN").build());
+    manager.createUser(User.withUsername("username").password("password").build());
 
     return manager;
   }
