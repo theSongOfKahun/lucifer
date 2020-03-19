@@ -1,0 +1,9 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: security-application
+logging:
+  level:
+    root: warn
+    org.springframework.web: debug

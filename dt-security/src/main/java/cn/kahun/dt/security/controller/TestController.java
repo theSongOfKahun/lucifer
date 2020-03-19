@@ -4,7 +4,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,33 +15,33 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/2/22 22:52
  * @description 记得写注释
  */
-@RestController
+@Controller
 public class TestController {
 
-  @GetMapping("/")
-  public JSONObject json(){
-
-    JSONObject jsonObject = new JSONObject();
-
-    jsonObject.put("key","value");
-
-    return jsonObject;
-
+  @RequestMapping("/")
+  public String root() {
+    return "redirect:/index";
   }
 
-  @GetMapping("/user")
-  public String user(){
+  @RequestMapping("/index")
+  public String index() {
+    return "index";
+  }
 
-    Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+  @RequestMapping("/user/index")
+  public String userIndex() {
+    return "user/index";
+  }
 
-    if (principal instanceof UserDetails){
+  @RequestMapping("/login")
+  public String login() {
+    return "login";
+  }
 
-      return JSON.toJSONString(principal);
-    }else {
-
-      return principal.toString();
-    }
-
+  @RequestMapping("/login-error")
+  public String loginError(Model model) {
+    model.addAttribute("loginError", true);
+    return "login";
   }
 
 }
