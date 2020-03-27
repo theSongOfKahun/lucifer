@@ -4,10 +4,5 @@ server:
 spring:
   application:
     name: spring-application
-
-#http://localhost:9000/actuator
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+  main:
+    lazy-initialization: false
