@@ -1,8 +1,10 @@
 server:
   port: 9000
-
 spring:
   application:
     name: spring-application
   main:
     lazy-initialization: false
+logging:
+  level:
+    root: info
