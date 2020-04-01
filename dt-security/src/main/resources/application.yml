@@ -3,7 +3,7 @@ server:
 spring:
   application:
     name: security-application
-logging:
-  level:
-    root: warn
-    org.springframework.web: debug
+#logging:
+#  level:
+#    root: warn
+#    org.springframework.web: debug
