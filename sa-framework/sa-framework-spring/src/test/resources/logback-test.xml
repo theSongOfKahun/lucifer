@@ -9,7 +9,7 @@
   <!--%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } [%X{request-id:-EMPTY}] [%X{current-user-id:-EMPTY}] [%t] %-40.40logger{39} - %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%yyEx}-->
   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
-      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%requestId] %-5level %logger{36} - %msg%n</pattern>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{requestId:-EMPTY}] %logger{32} - %msg%n</pattern>
     </encoder>
   </appender>
 

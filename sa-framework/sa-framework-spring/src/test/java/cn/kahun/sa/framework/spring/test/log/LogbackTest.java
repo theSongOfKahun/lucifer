@@ -6,6 +6,7 @@ import ch.qos.logback.core.util.StatusPrinter;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 
 /**
  * @create: 2020/3/31 9:24 上午
@@ -51,6 +52,16 @@ public class LogbackTest {
 
     rootLogger.debug("root logger debug log");
 
+  }
+
+  @Test
+  public void testPattern(){
+
+    Logger logger = LoggerFactory.getLogger(LogbackTest.class);
+
+    MDC.put("requestId","1234567");
+
+    logger.info("面对疾风吧");
 
   }
 
