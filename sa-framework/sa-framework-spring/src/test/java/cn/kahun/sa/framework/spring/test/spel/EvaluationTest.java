@@ -4,9 +4,7 @@ import cn.kahun.sa.framework.spring.beans.Inventor;
 import cn.kahun.sa.framework.spring.beans.ParseConfigurationBean;
 import cn.kahun.sa.framework.spring.beans.Simple;
 import cn.kahun.sa.framework.spring.beans.Society;
-import org.junit.Assert;
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.junit.jupiter.api.Test;
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
@@ -22,7 +20,6 @@ public class EvaluationTest {
     private static ExpressionParser expressionParser = new SpelExpressionParser();
     private static EvaluationContext simpleEvaluationContext = SimpleEvaluationContext.forReadOnlyDataBinding().build();
 
-    @Test
     public void testLiteralString(){
 
         Expression expression1 = expressionParser.parseExpression("'Hello World!'");
@@ -76,7 +73,6 @@ public class EvaluationTest {
 
         Boolean b = simple.getBooleanList().get(0);
 
-        Assert.assertTrue(b);
 
     }
 
@@ -100,7 +96,6 @@ public class EvaluationTest {
 
         Object o = expression.getValue(parseConfigurationBean);
 
-        Assert.assertEquals(o,"");
 
         System.out.println(parseConfigurationBean.getStringList().size());
     }

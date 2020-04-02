@@ -2,7 +2,6 @@ package cn.kahun.common.test.fastjson;
 
 import com.alibaba.fastjson.JSON;
 import java.util.Date;
-import org.junit.Test;
 
 /**
  * @create: 2020/2/28 1:41 下午
@@ -18,7 +17,6 @@ public class FastJSONTest {
       + "\t\t\"ts\":\"2019-12-17 19:36:34\"\n"
       + "\t}";
 
-  @Test
   public void test(){
 
     CommonVo commonVo = JSON.parseObject(str,CommonVo.class);

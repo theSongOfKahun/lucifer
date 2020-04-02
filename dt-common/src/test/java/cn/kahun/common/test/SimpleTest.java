@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
-import org.junit.Test;
 
 /**
  * @create: 2019/12/18 2:59 下午
@@ -22,7 +21,6 @@ public class SimpleTest {
 
   private static final String FILE_PATH = "/Users/prague/Pictures/test/11.jpeg";
 
-  @Test
   public void testFileSize() throws IOException {
 
     System.out.println(5.1 * 1024 * 1024);
@@ -41,14 +39,12 @@ public class SimpleTest {
 
   }
 
-  @Test
   public void testBase64(){
 
 
 
   }
 
-  @Test
   public void testTrouble(){
 
     JSONObject jsonObject = JSONObject.parseObject(bill);

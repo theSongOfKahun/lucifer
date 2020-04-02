@@ -3,7 +3,6 @@ package cn.kahun.common.test.algorithm;
 import cn.kahun.common.algorithm.SortingAlgorithm;
 import java.util.Random;
 import org.apache.commons.lang3.StringUtils;
-import org.junit.Test;
 
 /**
  * @author libo
@@ -12,7 +11,6 @@ import org.junit.Test;
  */
 public class SortAlgorithmTest {
 
-  @Test
   public void testInsertionSort(){
 
     int[] array = random(20);
