@@ -17,13 +17,4 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 @Configuration
 public class WebMvcConfiguration {
 
-  @Bean
-  public ObjectMapper objectMapper(Jackson2ObjectMapperBuilder jackson2ObjectMapperBuilder){
-
-    return jackson2ObjectMapperBuilder.createXmlMapper(false).serializationInclusion(
-        Include.NON_EMPTY).featuresToDisable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
-        .featuresToEnable(JsonReadFeature.ALLOW_UNESCAPED_CONTROL_CHARS, Feature.ALLOW_SINGLE_QUOTES)
-        .build();
-  }
-
 }
