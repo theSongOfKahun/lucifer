@@ -14,6 +14,7 @@
   <modules>
     <module>sa-mybatis</module>
     <module>sa-framework-spring</module>
+    <module>sa-junit</module>
   </modules>
 
 
