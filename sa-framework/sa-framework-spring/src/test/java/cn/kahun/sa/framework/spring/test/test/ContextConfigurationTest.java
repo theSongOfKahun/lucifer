@@ -6,11 +6,15 @@ import cn.kahun.sa.framework.spring.config.WebMvcConfiguration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.annotation.Resource;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@SpringJUnitConfig
-@ContextConfiguration(classes = TestConfiguration.class)
+
+//@ExtendWith(SpringExtension.class)
+//@ContextConfiguration(classes = TestConfiguration.class)
+@SpringJUnitConfig(classes = TestConfiguration.class)
 public class ContextConfigurationTest {
 
   @Resource
