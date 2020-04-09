@@ -1,11 +1,16 @@
 spring:
-  datasource:
-    url: jdbc:mysql://49.233.139.17/test?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root1234.
   main:
     log-startup-info: false
     web-application-type: none
-mybatis:
-  mapper-locations: cn.kahun.sa.mybatis.mapper.UserMapper
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://49.233.139.17/test?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true
+    username: root
+    password: Root1234.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    initialization-mode: always
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+
