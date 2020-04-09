@@ -5,8 +5,7 @@
 
 <generatorConfiguration>
 
-  <classPathEntry
-    location="E:/Documents/Repo/mysql/mysql-connector-java/5.1.22"/>
+<!--  <classPathEntry location="E:/Documents/Repo/mysql/mysql-connector-java/5.1.22"/>-->
 
   <context id="mysqlTables" targetRuntime="MyBatis3">
 
@@ -17,32 +16,32 @@
       <property name="suppressAllComments" value="true"/>
     </commentGenerator>
 
-    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-      connectionURL="jdbc:mysql://10.16.2.24:3306/piaoeda_admission?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai"
-      userId="piaoeda"
-      password="cyqakyOcH1">
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+      connectionURL="jdbc:mysql://49.233.139.17:3306/test?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true"
+      userId="root"
+      password="Root1234.">
     </jdbcConnection>
 
     <javaTypeResolver>
       <property name="forceBigDecimals" value="false"/>
     </javaTypeResolver>
 
-    <javaModelGenerator targetPackage="com.yonyou.einvoice.admission.control.entity" targetProject="src/main/java">
+    <javaModelGenerator targetPackage="cn.kahun.sa.mybatis.entity" targetProject="src/main/java">
       <property name="enableSubPackages" value="true"/>
       <property name="trimStrings" value="true"/>
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="mappers" targetProject="src/main/resources">
+    <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
       <property name="enableSubPackages" value="true"/>
     </sqlMapGenerator>
 
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.yonyou.einvoice.admission.control.repository" targetProject="src/main/java/">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="cn.kahun.sa.mybatis.mapper" targetProject="src/main/java/">
       <property name="enableSubPackages" value="true"/>
     </javaClientGenerator>
 
-    <table schema="DB2ADMIN" tableName="admission_quantity" domainObjectName="AdmissionQuantity"
-    enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false"
-    enableUpdateByExample="false"/>
+    <table schema="DB2ADMIN" tableName="uc_user" domainObjectName="User"
+    enableSelectByExample="true" enableCountByExample="true" enableDeleteByExample="true"
+    enableUpdateByExample="true"/>
 
 <!--    <table schema="DB2ADMIN" tableName="consumption_record_01" domainObjectName="ConsumptionRecord"-->
 <!--      enableSelectByExample="false" enableCountByExample="false" enableDeleteByExample="false"-->
