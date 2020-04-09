@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>sa-mybatis</artifactId>
+  <artifactId>sa-framework-mybatis</artifactId>
 
   <dependencies>
 
@@ -61,6 +61,5 @@
     </plugins>
 
   </build>
-
 
 </project>

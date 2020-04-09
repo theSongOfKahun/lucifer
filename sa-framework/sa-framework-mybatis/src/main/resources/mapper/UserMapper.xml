@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.kahun.sa.mybatis.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="cn.kahun.sa.mybatis.entity.User">
+<mapper namespace="cn.kahun.sa.framework.mybatis.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="cn.kahun.sa.framework.mybatis.entity.User">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="nickname" jdbcType="VARCHAR" property="nickname" />
@@ -79,7 +79,7 @@
     id, username, nickname, password, salt, email, mobile, register_date, status, type, 
     union_id, logo, create_time, ts
   </sql>
-  <select id="selectByExample" parameterType="cn.kahun.sa.mybatis.entity.UserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="cn.kahun.sa.framework.mybatis.entity.UserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -103,13 +103,13 @@
     delete from uc_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="cn.kahun.sa.mybatis.entity.UserExample">
+  <delete id="deleteByExample" parameterType="cn.kahun.sa.framework.mybatis.entity.UserExample">
     delete from uc_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="cn.kahun.sa.mybatis.entity.User">
+  <insert id="insert" parameterType="cn.kahun.sa.framework.mybatis.entity.User">
     insert into uc_user (id, username, nickname, 
       password, salt, email, 
       mobile, register_date, status, 
@@ -121,7 +121,7 @@
       #{type,jdbcType=TINYINT}, #{unionId,jdbcType=VARCHAR}, #{logo,jdbcType=VARCHAR}, 
       #{createTime,jdbcType=TIMESTAMP}, #{ts,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="cn.kahun.sa.mybatis.entity.User">
+  <insert id="insertSelective" parameterType="cn.kahun.sa.framework.mybatis.entity.User">
     insert into uc_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -212,7 +212,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="cn.kahun.sa.mybatis.entity.UserExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="cn.kahun.sa.framework.mybatis.entity.UserExample" resultType="java.lang.Long">
     select count(*) from uc_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -288,7 +288,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.kahun.sa.mybatis.entity.User">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.kahun.sa.framework.mybatis.entity.User">
     update uc_user
     <set>
       <if test="username != null">
@@ -333,7 +333,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.kahun.sa.mybatis.entity.User">
+  <update id="updateByPrimaryKey" parameterType="cn.kahun.sa.framework.mybatis.entity.User">
     update uc_user
     set username = #{username,jdbcType=VARCHAR},
       nickname = #{nickname,jdbcType=VARCHAR},

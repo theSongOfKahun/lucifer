@@ -1,15 +1,10 @@
-package cn.kahun.sa.mybatis.entity;
+package cn.kahun.sa.framework.mybatis.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 public class UserExample {
-
     protected String orderByClause;
 
     protected boolean distinct;
@@ -18,6 +13,26 @@ public class UserExample {
 
     public UserExample() {
         oredCriteria = new ArrayList<>();
+    }
+
+    public void setOrderByClause(String orderByClause) {
+        this.orderByClause = orderByClause;
+    }
+
+    public String getOrderByClause() {
+        return orderByClause;
+    }
+
+    public void setDistinct(boolean distinct) {
+        this.distinct = distinct;
+    }
+
+    public boolean isDistinct() {
+        return distinct;
+    }
+
+    public List<Criteria> getOredCriteria() {
+        return oredCriteria;
     }
 
     public void or(Criteria criteria) {
@@ -39,7 +54,8 @@ public class UserExample {
     }
 
     protected Criteria createCriteriaInternal() {
-        return new Criteria();
+        Criteria criteria = new Criteria();
+        return criteria;
     }
 
     public void clear() {
@@ -49,7 +65,6 @@ public class UserExample {
     }
 
     protected abstract static class GeneratedCriteria {
-
         protected List<Criterion> criteria;
 
         protected GeneratedCriteria() {

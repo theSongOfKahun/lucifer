@@ -1,9 +1,7 @@
-package cn.kahun.sa.mybatis;
+package cn.kahun.sa.framework.mybatis;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * @create: 2020/4/8 10:59 上午
