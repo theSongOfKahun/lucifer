@@ -14,14 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 @ContextConfiguration(classes = WebMvcConfiguration.class)
 public class SpringTest {
 
-  @Autowired
-  private ObjectMapper objectMapper;
 
-  @Test
-  public void test(){
-
-    System.out.println(objectMapper);
-  }
 
 
 
