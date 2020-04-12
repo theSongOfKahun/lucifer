@@ -1,16 +1,17 @@
 package cn.kahun.mt.netflix.hystrix.test.service;
 
 import cn.kahun.mt.netflix.hystrix.service.StoreIntegration;
-import cn.kahun.mt.netflix.hystrix.test.BaseTest;
 import javax.annotation.Resource;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  * @create: 2019-08-20 14:41
  * @author: liboah
  * @description: 记得写注释。。。
  **/
-public class StoreIntegrationTest extends BaseTest {
+@SpringBootTest
+public class StoreIntegrationTest {
 
   @Resource
   private StoreIntegration storeIntegration;

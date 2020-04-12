@@ -4,6 +4,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
@@ -12,7 +13,9 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
  * @description:
  **/
 
+
 @EnableCircuitBreaker
+@EnableDiscoveryClient
 @EnableHystrixDashboard
 @SpringBootApplication
 public class HystrixApplication {
@@ -21,7 +24,6 @@ public class HystrixApplication {
 
     new SpringApplicationBuilder(HystrixApplication.class)
         .web(WebApplicationType.SERVLET)
-        .properties("server.port=8081")
         .run(args);
   }
 }
