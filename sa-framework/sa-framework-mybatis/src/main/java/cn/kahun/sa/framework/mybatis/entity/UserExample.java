@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 public class UserExample {
+
     protected String orderByClause;
 
     protected boolean distinct;
@@ -54,8 +55,7 @@ public class UserExample {
     }
 
     protected Criteria createCriteriaInternal() {
-        Criteria criteria = new Criteria();
-        return criteria;
+        return new Criteria();
     }
 
     public void clear() {
