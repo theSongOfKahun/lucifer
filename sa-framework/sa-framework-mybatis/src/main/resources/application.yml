@@ -1,4 +1,7 @@
+
 spring:
+  application:
+    name: mybatis-application
   main:
     log-startup-info: false
     web-application-type: none
