@@ -1,4 +1,3 @@
-
 spring:
   application:
     name: mybatis-application
@@ -6,8 +5,10 @@ spring:
     log-startup-info: false
     web-application-type: none
     banner-mode: off
+  config:
+    name: jdbc
   datasource:
-    url: jdbc:mysql://49.233.139.17/test?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true
+    url: jdbc:mysql://49.233.139.17:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: Root1234.
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -16,4 +17,5 @@ spring:
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
-
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml

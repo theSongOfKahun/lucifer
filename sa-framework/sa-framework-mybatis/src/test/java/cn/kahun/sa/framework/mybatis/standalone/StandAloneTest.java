@@ -1,4 +1,4 @@
-package cn.kahun.sa.framework.test.standalone;
+package cn.kahun.sa.framework.mybatis.standalone;
 
 import cn.kahun.sa.framework.mybatis.entity.User;
 import cn.kahun.sa.framework.mybatis.mapper.UserMapper;
@@ -23,7 +23,7 @@ public class StandAloneTest {
 
   private static SqlSessionFactory sqlSessionFactory;
 
-  private static final String RESOURCE = "mybatis-config.xml";
+  private static final String RESOURCE = "standalone/mybatis-config.xml";
 
 
   @Test
